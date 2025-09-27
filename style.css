@@ -1,0 +1,226 @@
+:root{
+    --color-gray: #9fa3a0;
+    --color-green:#5db983;
+    --color-yellow: #fce37f;
+    --color-white:#FFFFFF;
+    --font: "Poppins", sans-serif;
+}
+
+
+*{
+    font-family: var(--font);
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.title{
+    text-decoration: wavy underline;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 27px;
+    margin-bottom: 10px;
+    margin-right: 280px;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}   
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* responsive */
+}
+
+.btn {
+    border-radius: 15px;
+    width: 135px;
+    height: 40px;              
+    display: flex;             
+    align-items: center;       
+    justify-content: center;   
+    gap: 8px; 
+    color: #FFFFFF;                 
+}
+
+.btn span:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.btn-gray span:first-child { color:var(--color-gray); }
+.btn-green span:first-child { color: var(--color-green); }
+.btn-yellow span:first-child { color: var(--color-yellow); }
+
+.btn-gray { background-color: var(--color-gray); }
+.btn-green { background-color: var(--color-green); }
+.btn-yellow { background-color: var(--color-yellow); }
+
+
+.search{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin-bottom: 20px;
+}
+
+.search button {
+    width:70px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.search input{
+    border: 1px solid var(--color-gray);
+    border-radius:7px;
+    width:400px;
+    height:34px;
+    padding: 5px 10px;
+}
+
+
+.notes_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.note{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    border-radius: 14px;
+    width:470px;
+    padding: 15px;
+    align-items: center;
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.note button{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.note span{
+    position: absolute;
+    margin-bottom: -35px;
+    font-size: 12px;
+}
+
+.note-done{
+    background: rgba(0, 255, 0, 0.05);
+    border:1px solid var(--color-green);
+}
+.note-done button{ background: var(--color-green) ; cursor: pointer; }
+
+.note-pending{
+    background: rgba(255, 222, 33, 0.05);
+    border: 1px solid  var(--color-yellow);
+}
+.note-pending button{ background:  var(--color-yellow);cursor: pointer;}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    scale: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 35, 35, 0.6);
+    z-index: 10;
+    transition: opacity 0.3s ease-in, scale 0.3s ease-in;
+}
+
+.overlay.showoverlay{
+    scale: 1;
+    opacity: 1;
+}
+
+.form{
+    position: fixed;
+    bottom: -100%; 
+    left: 0;
+    right: 0;
+    width: 97%;    
+    max-width: 600px;        
+    height: auto;  
+    margin: 0 auto;       
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    transition: bottom 0.3s ease-in-out;
+    z-index: 11;
+}
+
+.form h2{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form textarea {
+    display: block;
+    min-height: 120px;
+    border-radius: 10px;
+    resize: vertical;
+    width: 97%;
+    border: 1px solid var(--color-gray);
+    background: #f5f5f5;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form button {
+    border: none;
+    padding: 8px 20px;
+    background: var(--color-gray);
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .buttons{
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .search input{
+        width: 100%;
+    }
+
+    .form{
+        width: 95%;
+    }
+
+    .title{
+        font-size: 22px;
+        margin-right: 0;
+        text-align: center;
+    }
+}
+

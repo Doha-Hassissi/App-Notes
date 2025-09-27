@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Note App</title>
+</head>
+<body>
+    <div class="overlay"></div>
+        <form class="form">
+            <h2>Add Note </h2>
+            <label for="">Text :</label>
+            <textarea  placeholder="Add text"></textarea>
+            <button type="button" id="addnotebtn">Add</button>
+        </form>
+    
+    <div class="container">
+        <h1 class="title">My Priorities</h1>
+        <div class="buttons">
+            <button class="btn btn-gray">
+                <span id="allbtn">  0 </span>
+                <span>All notes</span>
+            </button>
+            <button class="btn btn-green">
+                <span id="donebtn"> 0 </span>
+                <span>Done</span>
+            </button>
+            <button class="btn btn-yellow">
+                <span id="pendingbtn"> 0 </span>
+                <span>Pending</span>
+            </button>
+        </div>
+        
+        <div class="search">
+            <input class="search_input" type="text"placeholder="  Search note ..."id="searchinput">
+            <button class="btn btn-gray" id="showform">Add</button>
+        </div>
+
+        <div class="notes_container">
+    
+        </div>
+
+    </div>
+    <script src="main.js" ></script>
+</body>
+</html>
