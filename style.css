@@ -213,6 +213,29 @@
     .search input{
         width: 100%;
     }
+    .notes_container {
+        width: 95%;           
+        gap: 10px;            
+        margin: 0 auto;      
+    }
+
+    .note {
+        width: 100%;           
+        padding: 10px;         
+        font-size: 14px;       
+        border-radius: 10px;   
+    }
+
+    .note p {
+        word-wrap: break-word; 
+    }
+    .note span {
+        margin-bottom: -26px;
+    }
+    .note button {
+        width: 18px;           
+        height: 18px;
+    }
 
     .form{
         width: 95%;
@@ -224,5 +247,6 @@
         text-align: center;
     }
 }
+
 
 
